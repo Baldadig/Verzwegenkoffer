@@ -1,0 +1,4 @@
+# Static one-pager — publish the repo root, no build step.
+[build]
+  publish = "."
+  command = ""
