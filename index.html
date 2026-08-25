@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>De Verzwegen Koffer — De oorlogsdagboeken van mijn ouders</title>
-<meta name="description" content="De Verzwegen Koffer vertelt het verhaal van Netty Offers en Herman Mulder, twee jonge Haarlemmers in het verzet. Hun dagboeken werden jaren later in een koffer teruggevonden. Verschenen in juni 2025; gedrukte oplage uitverkocht, digitale editie (iPad & ePub) binnenkort beschikbaar." />
+<meta name="description" content="De Verzwegen Koffer vertelt het verhaal van Netty Offers en Herman Mulder, twee jonge Haarlemmers in het verzet. Hun dagboeken werden jaren later in een koffer teruggevonden. Verschenen in juni 2025; de gedrukte oplage is uitverkocht, maar het boek is te leen bij de bibliotheek." />
 <meta property="og:title" content="De Verzwegen Koffer — De oorlogsdagboeken van mijn ouders" />
 <meta property="og:description" content="Het verhaal van twee jonge Haarlemmers in het verzet, gereconstrueerd uit dagboeken die jaren later in een koffer werden teruggevonden." />
 <meta property="og:type" content="website" />
@@ -105,6 +105,10 @@
   .callout{margin-top:1.6rem;padding:1.3rem 1.5rem;background:var(--card);border:1px solid var(--wine-20);border-left:4px solid var(--orange);border-radius:10px}
   .callout p{margin:0;font-size:.98rem;color:var(--wine-80)}
   .callout strong{color:var(--wine)}
+  /* Bibliotheek-link: subtiel, met pijl die meebeweegt */
+  .lib-link{display:inline-flex;align-items:center;gap:.4em;font-weight:600;color:var(--orange-d);border-bottom:1px solid rgba(196,95,0,.35);padding-bottom:1px;transition:border-color .15s,gap .15s}
+  .lib-link:hover{text-decoration:none;border-bottom-color:var(--orange-d);gap:.6em}
+  .lib-link::after{content:"\2192";font-weight:400}
   @media(max-width:780px){.book{grid-template-columns:1fr}.book-cover{max-width:280px;margin-inline:auto}}
 
   /* Video */
@@ -236,7 +240,7 @@
       <p data-i18n="book.p1">Dit boek vertelt het inspirerende verhaal van twee jonge Haarlemmers die, onafhankelijk van elkaar, actief waren in het verzet tijdens de Tweede Wereldoorlog. Hun dagboeken en notities &mdash; jaren later ontdekt &mdash; onthullen hun moed, hoe ze elkaar na de oorlog vonden, en het leven dat ze samen opbouwden.</p>
       <p data-i18n="book.p2">Een uniek stukje geschiedenis, opgetekend door wie het van het dichtstbij meemaakten.</p>
       <div class="callout">
-        <p data-i18n-html="book.callout"><strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is inmiddels uitverkocht. Een digitale editie voor iPad en als ePub is in de maak en is binnenkort beschikbaar. Vragen of interesse? <a href="#contact">Stuur gerust een bericht.</a></p>
+        <p data-i18n-html="book.callout"><strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is uitverkocht en wordt niet herdrukt. Het verhaal blijft wel beschikbaar: het boek is opgenomen in de collectie van de bibliotheek en te leen via uw eigen vestiging. <a class="lib-link" href="https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/" target="_blank" rel="noopener">Bekijk het boek op Bibliotheek.nl</a></p>
       </div>
     </div>
   </div>
@@ -333,8 +337,8 @@
     <p class="eyebrow" data-i18n="faq.eyebrow">Vragen</p>
     <h2 data-i18n="faq.title">Veelgestelde vragen</h2>
     <div class="faq-list">
-      <details class="faq"><summary data-i18n="faq.q1">Is het boek nog te koop?</summary><div class="faq-a" data-i18n-html="faq.a1">De gedrukte oplage verscheen in juni 2025 en is inmiddels uitverkocht. Een digitale editie voor iPad en als ePub is in de maak en is binnenkort beschikbaar. Wilt u op de hoogte blijven? <a href="#contact">Laat het ons weten.</a></div></details>
-      <details class="faq"><summary data-i18n="faq.q2">Komt er een digitale versie?</summary><div class="faq-a" data-i18n="faq.a2">Ja. Er wordt gewerkt aan een digitale editie voor iPad en als ePub, die binnenkort beschikbaar komt.</div></details>
+      <details class="faq"><summary data-i18n="faq.q1">Is het boek nog te koop?</summary><div class="faq-a" data-i18n-html="faq.a1">De gedrukte oplage verscheen in juni 2025 en is inmiddels uitverkocht; er komt geen herdruk. U kunt het boek wel lenen bij de bibliotheek. <a class="lib-link" href="https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/" target="_blank" rel="noopener">Bekijk het boek op Bibliotheek.nl</a></div></details>
+      <details class="faq"><summary data-i18n="faq.q2">Waar kan ik het boek nog lezen?</summary><div class="faq-a" data-i18n-html="faq.a2">Bij de bibliotheek. De titel staat in de landelijke catalogus; via uw eigen vestiging kunt u het boek lenen. <a class="lib-link" href="https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/" target="_blank" rel="noopener">Zoek uw bibliotheek op Bibliotheek.nl</a></div></details>
       <details class="faq"><summary data-i18n="faq.q3">Wanneer is het boek verschenen?</summary><div class="faq-a" data-i18n="faq.a3">In juni 2025, precies tachtig jaar na de bevrijding.</div></details>
       <details class="faq"><summary data-i18n="faq.q4">Wie was Netty Offers?</summary><div class="faq-a" data-i18n="faq.a4">Netty Offers was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten. Ze hield vanaf 1941 vijf dagboeken bij — achthonderd pagina&rsquo;s over haar leven en het verzet.</div></details>
       <details class="faq"><summary data-i18n="faq.q5">Wie was Herman Mulder?</summary><div class="faq-a" data-i18n="faq.a5">Herman Mulder was wapeninstructeur bij de Binnenlandse Strijdkrachten. In 1945 hield hij een agenda bij die nauw aansluit op de dagboeken van Netty.</div></details>
@@ -350,7 +354,7 @@
       <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
       <h2 data-i18n="contact.title">Het boek is uit, het verhaal leeft door</h2>
       <p class="lede" data-i18n="contact.lead">Heeft u een vraag, een herinnering of wilt u meer weten over De Verzwegen Koffer?</p>
-      <p style="color:rgba(250,244,232,.78)" data-i18n="contact.text">De gedrukte oplage is uitverkocht en een digitale editie is in de maak. De schrijfster hoort graag van lezers en geïnteresseerden — laat hiernaast een bericht achter en u krijgt persoonlijk antwoord.</p>
+      <p style="color:rgba(250,244,232,.78)" data-i18n="contact.text">De gedrukte oplage is uitverkocht; bij de bibliotheek is het boek nog te leen. De schrijfster hoort graag van lezers en geïnteresseerden — laat hiernaast een bericht achter en u krijgt persoonlijk antwoord.</p>
     </div>
     <div>
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
@@ -404,7 +408,7 @@
       "book.eyebrow":"Het boek",
       "book.p1":"Dit boek vertelt het inspirerende verhaal van twee jonge Haarlemmers die, onafhankelijk van elkaar, actief waren in het verzet tijdens de Tweede Wereldoorlog. Hun dagboeken en notities — jaren later ontdekt — onthullen hun moed, hoe ze elkaar na de oorlog vonden, en het leven dat ze samen opbouwden.",
       "book.p2":"Een uniek stukje geschiedenis, opgetekend door wie het van het dichtstbij meemaakten.",
-      "book.callout":"<strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is inmiddels uitverkocht. Een digitale editie voor iPad en als ePub is in de maak en is binnenkort beschikbaar. Vragen of interesse? <a href=\"#contact\">Stuur gerust een bericht.</a>",
+      "book.callout":"<strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is uitverkocht en wordt niet herdrukt. Het verhaal blijft wel beschikbaar: het boek is opgenomen in de collectie van de bibliotheek en te leen via uw eigen vestiging. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">Bekijk het boek op Bibliotheek.nl</a>",
       "video.eyebrow":"In beeld","video.title":"Het verhaal in beeld","video.text":"Een korte film over de koffer, de dagboeken en het verhaal van Netty en Herman.",
       "story.eyebrow":"Het verhaal","story.title":"Twee levens, twee dagboeken, één bevrijding",
       "story.lead":"Netty Offers en Herman Mulder leren elkaar pas twee dagen na de bevrijding kennen — maar waren onafhankelijk van elkaar actief in het verzet.",
@@ -429,15 +433,15 @@
       "koffer.p2":"Hun oudste dochter, Mirjam Vrees-Mulder, gebruikte het gevonden materiaal om het verhaal van haar ouders zorgvuldig te reconstrueren. Het resultaat verscheen in juni 2025, precies tachtig jaar na de bevrijding.",
       "koffer.quote":"“Wat zij verzwegen, bewaarden ze. Wat ze bewaarden, vertelt nu hun verhaal.”",
       "faq.eyebrow":"Vragen","faq.title":"Veelgestelde vragen",
-      "faq.q1":"Is het boek nog te koop?","faq.a1":"De gedrukte oplage verscheen in juni 2025 en is inmiddels uitverkocht. Een digitale editie voor iPad en als ePub is in de maak en is binnenkort beschikbaar. Wilt u op de hoogte blijven? <a href=\"#contact\">Laat het ons weten.</a>",
-      "faq.q2":"Komt er een digitale versie?","faq.a2":"Ja. Er wordt gewerkt aan een digitale editie voor iPad en als ePub, die binnenkort beschikbaar komt.",
+      "faq.q1":"Is het boek nog te koop?","faq.a1":"De gedrukte oplage verscheen in juni 2025 en is inmiddels uitverkocht; er komt geen herdruk. U kunt het boek wel lenen bij de bibliotheek. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">Bekijk het boek op Bibliotheek.nl</a>",
+      "faq.q2":"Waar kan ik het boek nog lezen?","faq.a2":"Bij de bibliotheek. De titel staat in de landelijke catalogus; via uw eigen vestiging kunt u het boek lenen. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">Zoek uw bibliotheek op Bibliotheek.nl</a>",
       "faq.q3":"Wanneer is het boek verschenen?","faq.a3":"In juni 2025, precies tachtig jaar na de bevrijding.",
       "faq.q4":"Wie was Netty Offers?","faq.a4":"Netty Offers was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten. Ze hield vanaf 1941 vijf dagboeken bij — achthonderd pagina’s over haar leven en het verzet.",
       "faq.q5":"Wie was Herman Mulder?","faq.a5":"Herman Mulder was wapeninstructeur bij de Binnenlandse Strijdkrachten. In 1945 hield hij een agenda bij die nauw aansluit op de dagboeken van Netty.",
       "faq.q6":"Wie heeft het boek geschreven?","faq.a6":"Het boek is geschreven door Mirjam Vrees-Mulder, de oudste dochter van Netty en Herman. Zij reconstrueerde hun verhaal aan de hand van de dagboeken, agenda’s en memorabilia uit de koffer.",
       "contact.eyebrow":"Contact","contact.title":"Het boek is uit, het verhaal leeft door",
       "contact.lead":"Heeft u een vraag, een herinnering of wilt u meer weten over De Verzwegen Koffer?",
-      "contact.text":"De gedrukte oplage is uitverkocht en een digitale editie is in de maak. De schrijfster hoort graag van lezers en geïnteresseerden — laat hiernaast een bericht achter en u krijgt persoonlijk antwoord.",
+      "contact.text":"De gedrukte oplage is uitverkocht; bij de bibliotheek is het boek nog te leen. De schrijfster hoort graag van lezers en geïnteresseerden — laat hiernaast een bericht achter en u krijgt persoonlijk antwoord.",
       "form.naam":"Naam","form.naamPh":"Uw naam","form.email":"E-mailadres","form.bericht":"Bericht","form.berichtPh":"Waar gaat uw bericht over?",
       "form.send":"Verstuur bericht","form.note":"Uw gegevens worden alleen gebruikt om uw bericht te beantwoorden.",
       "form.success":"<strong>Bedankt voor uw bericht.</strong><br />Het is goed aangekomen — u hoort zo snel mogelijk iets terug.",
@@ -453,7 +457,7 @@
       "book.eyebrow":"The book",
       "book.p1":"This book tells the inspiring story of two young people from Haarlem who, independently of one another, were active in the resistance during the Second World War. Their diaries and notes — discovered years later — reveal their courage, how they found each other after the war, and the life they built together.",
       "book.p2":"A unique piece of history, recorded by those who witnessed it from the closest of distances.",
-      "book.callout":"<strong>The book was published in June 2025, exactly eighty years after the liberation.</strong> The print run has now sold out. A digital edition for iPad and as an ePub is in the works and will be available soon. Questions or interest? <a href=\"#contact\">Send a message.</a>",
+      "book.callout":"<strong>The book was published in June 2025, exactly eighty years after the liberation.</strong> The print run has sold out and will not be reprinted. The story remains available, however: the book is held in the Dutch public library collection and can be borrowed from your local branch. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">View the book on Bibliotheek.nl</a>",
       "video.eyebrow":"Watch","video.title":"The story in pictures","video.text":"A short film about the suitcase, the diaries and the story of Netty and Herman.",
       "story.eyebrow":"The story","story.title":"Two lives, two diaries, one liberation",
       "story.lead":"Netty Offers and Herman Mulder met only two days after the liberation — yet both had been active in the resistance, independently of one another.",
@@ -478,15 +482,15 @@
       "koffer.p2":"Their eldest daughter, Mirjam Vrees-Mulder, used the recovered material to carefully reconstruct her parents’ story. The result was published in June 2025, exactly eighty years after the liberation.",
       "koffer.quote":"“What they kept silent, they kept. What they kept now tells their story.”",
       "faq.eyebrow":"FAQ","faq.title":"Frequently asked questions",
-      "faq.q1":"Is the book still for sale?","faq.a1":"The print run was published in June 2025 and has now sold out. A digital edition for iPad and as an ePub is in the works and will be available soon. Want to stay informed? <a href=\"#contact\">Let us know.</a>",
-      "faq.q2":"Will there be a digital version?","faq.a2":"Yes. A digital edition for iPad and as an ePub is in development and will be available soon.",
+      "faq.q1":"Is the book still for sale?","faq.a1":"The print run was published in June 2025 and has sold out; there will be no reprint. You can, however, borrow the book from a Dutch public library. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">View the book on Bibliotheek.nl</a>",
+      "faq.q2":"Where can I still read the book?","faq.a2":"At the library. The title is listed in the Dutch national library catalogue and can be borrowed through your local branch. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">Find your library on Bibliotheek.nl</a>",
       "faq.q3":"When was the book published?","faq.a3":"In June 2025, exactly eighty years after the liberation.",
       "faq.q4":"Who was Netty Offers?","faq.a4":"Netty Offers was a courier with the Women’s Corps of the Domestic Armed Forces. From 1941 she kept five diaries — eight hundred pages about her life and the resistance.",
       "faq.q5":"Who was Herman Mulder?","faq.a5":"Herman Mulder was a weapons instructor with the Domestic Armed Forces. In 1945 he kept a diary that closely matches Netty’s.",
       "faq.q6":"Who wrote the book?","faq.a6":"The book was written by Mirjam Vrees-Mulder, the eldest daughter of Netty and Herman. She reconstructed their story from the diaries, planners and memorabilia in the suitcase.",
       "contact.eyebrow":"Contact","contact.title":"The book is out, the story lives on",
       "contact.lead":"Do you have a question, a memory, or would you like to know more about De Verzwegen Koffer?",
-      "contact.text":"The print run has sold out and a digital edition is in the works. The author is glad to hear from readers and those interested — leave a message and you’ll get a personal reply.",
+      "contact.text":"The print run has sold out; the book can still be borrowed from Dutch public libraries. The author is glad to hear from readers and those interested — leave a message and you’ll get a personal reply.",
       "form.naam":"Name","form.naamPh":"Your name","form.email":"Email","form.bericht":"Message","form.berichtPh":"What is your message about?",
       "form.send":"Send message","form.note":"Your details are only used to reply to your message.",
       "form.success":"<strong>Thank you for your message.</strong><br />It has arrived safely — you’ll hear back as soon as possible.",
