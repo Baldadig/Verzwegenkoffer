@@ -80,10 +80,16 @@
 
   /* Hero */
   .hero{position:relative;color:var(--paper);overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02)}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(33,6,16,.88) 0%,rgba(33,6,16,.66) 42%,rgba(33,6,16,.28) 100%)}
+  /* Foto heeft het portret links; tekst staat rechts zodat Netty vrij blijft */
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:35% center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(255deg,rgba(33,6,16,.9) 0%,rgba(33,6,16,.72) 45%,rgba(33,6,16,.2) 100%)}
   .hero-inner{position:relative;display:grid;align-items:center;min-height:min(86vh,720px);padding:5rem 0}
-  .hero-card{max-width:640px}
+  .hero-card{max-width:620px;margin-left:auto}
+  @media(max-width:900px){
+    .hero-card{margin-left:0;max-width:none}
+    .hero-bg{background-position:30% center}
+    .hero-bg::after{background:linear-gradient(180deg,rgba(33,6,16,.68) 0%,rgba(33,6,16,.9) 100%)}
+  }
   .hero .eyebrow{color:#f1b06a}
   .hero h1{color:var(--paper);font-size:clamp(2.1rem,4.6vw,3.5rem);margin-bottom:.5em}
   .hero .lead{color:rgba(250,244,232,.9);font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:34em;margin-bottom:1.5em}
@@ -300,7 +306,7 @@
     <div class="slider">
       <button class="slider-btn prev" type="button" aria-label="Vorige" data-slide="-1">&#8249;</button>
       <div class="slider-track" id="sliderTrack">
-        <figure class="slide"><img src="hero.jpg" alt="De inhoud van de koffer" loading="lazy" /><figcaption data-i18n="cap1">De koffer geopend: dagboeken, krantenknipsels en persoonlijke bezittingen.</figcaption></figure>
+        <figure class="slide"><img src="koffer.jpg" alt="De inhoud van de koffer" loading="lazy" /><figcaption data-i18n="cap1">De koffer geopend: dagboeken, krantenknipsels en persoonlijke bezittingen.</figcaption></figure>
         <figure class="slide"><img src="spoorwegstaking.jpg" alt="Aantekeningen over de Spoorwegstaking, 1944" loading="lazy" /><figcaption data-i18n="cap2">Aantekeningen over de Spoorwegstaking van september 1944.</figcaption></figure>
         <figure class="slide"><img src="bombardement.jpg" alt="Een bombardement op een Amsterdamse buurt, 1943" loading="lazy" /><figcaption data-i18n="cap3">Een bombardement op een Amsterdamse buurt, 1943.</figcaption></figure>
         <figure class="slide"><img src="bevrijding.jpg" alt="De bevrijding, mei 1945" loading="lazy" /><figcaption data-i18n="cap4">De bevrijding: geallieerde colonnes en juichende mensen, mei 1945.</figcaption></figure>
