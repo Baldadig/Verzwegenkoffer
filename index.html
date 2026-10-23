@@ -94,15 +94,16 @@
   .hero{position:relative;color:var(--paper);overflow:hidden}
   /* Foto heeft het portret links; tekst staat rechts zodat Netty vrij blijft */
   .hero-bg{position:absolute;inset:0;background-size:cover;background-position:35% center;transform:scale(1.02)}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(255deg,rgba(33,6,16,.9) 0%,rgba(33,6,16,.72) 45%,rgba(33,6,16,.2) 100%)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(255deg,rgba(33,6,16,.76) 0%,rgba(33,6,16,.5) 45%,rgba(33,6,16,.06) 100%)}
   .hero-inner{position:relative;display:grid;align-items:center;min-height:min(86vh,720px);padding:5rem 0}
   .hero-card{max-width:620px;margin-left:auto}
   @media(max-width:900px){
     .hero-card{margin-left:0;max-width:none}
     .hero-bg{background-position:30% center}
-    .hero-bg::after{background:linear-gradient(180deg,rgba(33,6,16,.68) 0%,rgba(33,6,16,.9) 100%)}
+    .hero-bg::after{background:linear-gradient(180deg,rgba(33,6,16,.48) 0%,rgba(33,6,16,.76) 100%)}
   }
   .hero .eyebrow{color:#f1b06a}
+  .hero h1,.hero .lead,.hero-meta,.hero .eyebrow{text-shadow:0 1px 2px rgba(20,4,10,.55),0 2px 18px rgba(20,4,10,.45)}
   .hero h1{color:var(--paper);font-size:clamp(2.1rem,4.6vw,3.5rem);margin-bottom:.5em}
   .hero .lead{color:rgba(250,244,232,.94);font-size:clamp(1.18rem,1.6vw,1.35rem);line-height:1.6;max-width:34em;margin-bottom:1.5em}
   .hero-meta{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;font-size:1rem;color:rgba(250,244,232,.86);margin-bottom:1.9rem}
