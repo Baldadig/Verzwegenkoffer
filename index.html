@@ -38,15 +38,19 @@
     html{scroll-behavior:auto}
     *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
   }
-  body{margin:0;font-family:var(--sans);font-size:clamp(16px,1.05vw + 12px,18px);line-height:1.72;color:var(--wine-80);background:var(--paper);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
-  h1,h2,h3{font-family:var(--serif);color:var(--wine);font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0 0 .4em;text-wrap:balance}
-  p{margin:0 0 1.1em;max-width:var(--measure)}
+  /* Basisgrootte ruim gezet: prettig leesbaar voor een ouder publiek */
+  body{margin:0;font-family:var(--sans);font-size:clamp(18px,0.9vw + 15px,20px);line-height:1.75;color:var(--wine-80);background:var(--paper);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--serif);color:var(--wine);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0 0 .4em;text-wrap:balance}
+  h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+  p{margin:0 0 1.15em;max-width:var(--measure)}
   a{color:var(--orange-d);text-decoration:none}
   a:hover{text-decoration:underline}
+  /* Links in lopende tekst altijd onderstreept: kleur alleen is te subtiel */
+  p a:not(.btn):not(.lib-link),.faq-a a:not(.lib-link),li a:not(.btn){text-decoration:underline;text-underline-offset:3px}
   img{max-width:100%;display:block}
   .wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
-  .eyebrow{font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange-d);margin:0 0 1rem}
-  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.95rem;padding:.85em 1.6em;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
+  .eyebrow{font-weight:600;font-size:.92rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-d);margin:0 0 1rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:600;font-size:1.05rem;padding:.95em 1.9em;min-height:56px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
   .btn-primary{background:var(--orange);color:#fff}
   .btn-primary:hover{background:var(--orange-d);text-decoration:none;transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(196,95,0,.7)}
   .btn-ghost{background:transparent;color:var(--wine);border-color:var(--wine-20)}
@@ -55,28 +59,30 @@
   /* Header */
   header.site{position:sticky;top:0;z-index:50;background:rgba(250,244,232,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--wine-20)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
-  .brand{font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--wine);white-space:nowrap}
-  .nav-right{display:flex;align-items:center;gap:1.3rem}
-  .nav-links{display:flex;align-items:center;gap:1.7rem}
-  .nav-links a{color:var(--wine-80);font-size:.92rem;font-weight:500}
+  .brand{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--wine);white-space:nowrap}
+  .nav-right{display:flex;align-items:center;gap:1.1rem}
+  .nav-links{display:flex;align-items:center;gap:1.6rem}
+  .nav-links a{color:var(--wine-80);font-size:1.02rem;font-weight:500;padding:.5rem .2rem}
   .nav-links a:hover{color:var(--orange-d);text-decoration:none}
-  .lang-btn{font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.08em;padding:.42em .8em;border-radius:999px;border:1.5px solid var(--wine-20);background:transparent;color:var(--wine);cursor:pointer;transition:background .15s,color .15s}
+  .lang-btn{font-family:var(--sans);font-weight:600;font-size:.95rem;letter-spacing:.06em;padding:.5em 1em;min-height:48px;min-width:56px;border-radius:999px;border:1.5px solid var(--wine-20);background:transparent;color:var(--wine);cursor:pointer;transition:background .15s,color .15s}
   .lang-btn:hover{background:var(--wine);color:var(--paper)}
-  .nav .btn{padding:.58em 1.15em}
+  .nav .btn{padding:.7em 1.4em;min-height:48px;font-size:1rem}
   /* Hamburger + mobile menu */
-  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;padding:0;border:1.5px solid var(--wine-20);border-radius:10px;background:transparent;cursor:pointer}
-  .nav-toggle span{display:block;width:20px;height:2px;margin:0 auto;background:var(--wine);border-radius:2px;transition:transform .2s,opacity .2s}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:6px;width:52px;height:52px;padding:0;border:1.5px solid var(--wine-20);border-radius:12px;background:transparent;cursor:pointer}
+  .nav-toggle span{display:block;width:24px;height:2.5px;margin:0 auto;background:var(--wine);border-radius:2px;transition:transform .2s,opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
   .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;flex-direction:column;padding:.2rem 0 1.1rem}
-  .mobile-menu a:not(.btn){padding:.85rem .2rem;color:var(--wine-80);font-weight:500;font-size:1.02rem;border-top:1px solid var(--wine-20)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+  .mobile-menu{display:none;flex-direction:column;padding:.2rem 0 1.2rem}
+  .mobile-menu a:not(.btn){padding:1.1rem .2rem;min-height:56px;display:flex;align-items:center;color:var(--wine-80);font-weight:500;font-size:1.15rem;border-top:1px solid var(--wine-20)}
   .mobile-menu a:not(.btn):hover{color:var(--orange-d);text-decoration:none}
   .mobile-menu .btn-primary{margin-top:.9rem;justify-content:center}
   header.site.menu-open .mobile-menu{display:flex}
-  @media(max-width:860px){.nav-links{display:none}.nav-toggle{display:flex}}
+  /* Zodra het hamburgermenu verschijnt, verdwijnt de contactknop uit de balk
+     (hij staat in het uitklapmenu) — anders breekt de kop op smalle schermen */
+  @media(max-width:860px){.nav-links{display:none}.nav-toggle{display:flex}.nav-right .btn-primary{display:none}}
   @media(min-width:861px){.mobile-menu{display:none!important}}
-  @media(max-width:420px){.nav-right .btn-primary{display:none}}
+  @media(max-width:360px){.brand{font-size:1.1rem}}
 
   /* Hero */
   .hero{position:relative;color:var(--paper);overflow:hidden}
@@ -92,16 +98,16 @@
   }
   .hero .eyebrow{color:#f1b06a}
   .hero h1{color:var(--paper);font-size:clamp(2.1rem,4.6vw,3.5rem);margin-bottom:.5em}
-  .hero .lead{color:rgba(250,244,232,.9);font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:34em;margin-bottom:1.5em}
-  .hero-meta{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;font-size:.85rem;color:rgba(250,244,232,.78);margin-bottom:1.9rem}
-  .tag{display:inline-block;border:1px solid rgba(241,176,106,.6);color:#f1b06a;border-radius:999px;padding:.3em .9em;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
-  .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+  .hero .lead{color:rgba(250,244,232,.94);font-size:clamp(1.18rem,1.6vw,1.35rem);line-height:1.6;max-width:34em;margin-bottom:1.5em}
+  .hero-meta{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;font-size:1rem;color:rgba(250,244,232,.86);margin-bottom:1.9rem}
+  .tag{display:inline-block;border:1px solid rgba(241,176,106,.7);color:#f3bc7f;border-radius:999px;padding:.4em 1em;font-weight:600;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase}
+  .hero-actions{display:flex;gap:.9rem;flex-wrap:wrap}
   .hero .btn-ghost{color:var(--paper);border-color:rgba(250,244,232,.5)}
   .hero .btn-ghost:hover{background:var(--paper);color:var(--wine)}
 
   section{padding:clamp(3.5rem,7vw,6rem) 0}
   .section-alt{background:var(--paper-2)}
-  .lede{font-size:clamp(1.12rem,1.8vw,1.4rem);line-height:1.55;color:var(--wine);max-width:30em}
+  .lede{font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.6;color:var(--wine);max-width:30em}
   .section-head{max-width:46rem;margin-bottom:2.2rem}
 
   /* Book */
@@ -109,7 +115,7 @@
   .book-cover img{border-radius:6px;box-shadow:0 30px 60px -28px rgba(61,8,27,.55),0 4px 14px -6px rgba(61,8,27,.4);rotate:-1.5deg;transition:rotate .3s}
   .book-cover img:hover{rotate:0deg}
   .callout{margin-top:1.6rem;padding:1.3rem 1.5rem;background:var(--card);border:1px solid var(--wine-20);border-left:4px solid var(--orange);border-radius:10px}
-  .callout p{margin:0;font-size:.98rem;color:var(--wine-80)}
+  .callout p{margin:0;font-size:1.05rem;color:var(--wine-80)}
   .callout strong{color:var(--wine)}
   /* Bibliotheek-link: subtiel, met pijl die meebeweegt */
   .lib-link{display:inline-flex;align-items:center;gap:.4em;font-weight:600;color:var(--orange-d);border-bottom:1px solid rgba(196,95,0,.35);padding-bottom:1px;transition:border-color .15s,gap .15s}
@@ -125,8 +131,8 @@
   .people{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem)}
   .person{display:flex;flex-direction:column}
   .person img{width:100%;max-width:248px;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;filter:grayscale(.12) sepia(.1);border-radius:12px;box-shadow:0 18px 36px -22px rgba(61,8,27,.6);margin-bottom:1.3rem}
-  .person .role{font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-d);margin:0 0 .4rem}
-  .person h3{font-size:1.45rem}
+  .person .role{font-weight:600;font-size:.92rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-d);margin:0 0 .45rem}
+  .person h3{font-size:1.6rem}
   @media(max-width:720px){.people{grid-template-columns:1fr;gap:2.6rem}.person img{max-width:220px}}
 
   /* Slider */
@@ -136,24 +142,27 @@
   .slider-track::-webkit-scrollbar-thumb{background:var(--wine-20);border-radius:3px}
   .slide{flex:0 0 min(520px,84%);scroll-snap-align:center}
   .slide img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 20px 42px -26px rgba(61,8,27,.6);filter:sepia(.12)}
-  .slide figcaption{margin:.7rem .2rem 0;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--wine-70)}
-  .slider-btn{position:absolute;top:34%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--wine-20);background:rgba(250,244,232,.92);color:var(--wine);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(61,8,27,.5);transition:background .15s,transform .15s;z-index:2}
+  .slide figcaption{margin:.8rem .2rem 0;font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.5;color:var(--wine-70)}
+  .slider-btn{position:absolute;top:34%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid var(--wine-20);background:rgba(250,244,232,.95);color:var(--wine);font-size:1.7rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(61,8,27,.5);transition:background .15s,transform .15s;z-index:2}
   .slider-btn:hover{background:var(--wine);color:var(--paper)}
-  .slider-btn.prev{left:-6px} .slider-btn.next{right:-6px}
-  .slider-dots{display:none;justify-content:center;gap:.55rem;margin-top:1rem;flex-wrap:wrap}
-  .slider-dots button{width:9px;height:9px;padding:0;border:none;border-radius:50%;background:var(--wine-20);cursor:pointer;transition:background .2s,transform .2s;-webkit-appearance:none}
-  .slider-dots button.active{background:var(--wine);transform:scale(1.3)}
-  .slider-hint{display:none;text-align:center;margin-top:.6rem;font-size:.82rem;color:var(--wine-70);font-style:italic}
+  .slider-btn.prev{left:-8px} .slider-btn.next{right:-8px}
+  /* Stippen: klein bolletje, maar een ruim klikgebied van 44px eromheen */
+  .slider-dots{display:none;justify-content:center;gap:.15rem;margin-top:.6rem;flex-wrap:wrap}
+  .slider-dots button{width:44px;height:44px;padding:0;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-appearance:none}
+  .slider-dots button::before{content:"";width:13px;height:13px;border-radius:50%;background:var(--wine-20);transition:background .2s,transform .2s}
+  .slider-dots button.active::before{background:var(--wine);transform:scale(1.35)}
+  .slider-hint{display:none;text-align:center;margin-top:.2rem;font-size:1rem;color:var(--wine-70);font-style:italic}
   @media(max-width:680px){.slider-btn{display:none}.slider-dots{display:flex}.slider-hint{display:block}}
 
   /* FAQ */
   .faq-list{max-width:760px;margin-top:1.4rem}
   details.faq{border-bottom:1px solid var(--wine-20)}
-  details.faq summary{cursor:pointer;list-style:none;padding:1.05rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--wine)}
+  details.faq summary{cursor:pointer;list-style:none;padding:1.35rem 0;min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--wine)}
+  details.faq summary:hover{color:var(--orange-d)}
   details.faq summary::-webkit-details-marker{display:none}
-  details.faq summary::after{content:"+";font-size:1.5rem;color:var(--orange);font-family:var(--sans);line-height:1}
+  details.faq summary::after{content:"+";font-size:1.9rem;color:var(--orange);font-family:var(--sans);line-height:1;flex:none}
   details.faq[open] summary::after{content:"\2212"}
-  details.faq .faq-a{padding:0 0 1.2rem;color:var(--wine-80);max-width:64ch}
+  details.faq .faq-a{padding:0 0 1.4rem;color:var(--wine-80);max-width:64ch;font-size:1.05rem}
   details.faq .faq-a a{font-weight:500}
 
   /* Feature */
@@ -168,26 +177,37 @@
   .contact h2{color:var(--paper)}
   .contact .lede{color:rgba(250,244,232,.92)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
-  form{display:grid;gap:1.1rem}
-  .field{display:grid;gap:.4rem}
-  label{font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(250,244,232,.82)}
-  input,textarea{font-family:var(--sans);font-size:1rem;color:var(--paper);background:rgba(250,244,232,.06);border:1px solid rgba(250,244,232,.28);border-radius:8px;padding:.8em .9em;width:100%;transition:border-color .15s,background .15s}
-  input::placeholder,textarea::placeholder{color:rgba(250,244,232,.45)}
-  input:focus,textarea:focus{outline:none;border-color:var(--orange);background:rgba(250,244,232,.1)}
-  textarea{min-height:140px;resize:vertical}
+  form{display:grid;gap:1.3rem}
+  .field{display:grid;gap:.5rem}
+  /* Labels in gewone schrijfwijze: kapitalen lezen trager */
+  label{font-size:1.05rem;font-weight:600;letter-spacing:0;color:rgba(250,244,232,.95)}
+  input,textarea{font-family:var(--sans);font-size:1.05rem;color:var(--paper);background:rgba(250,244,232,.08);border:1.5px solid rgba(250,244,232,.38);border-radius:10px;padding:.85em 1em;min-height:56px;width:100%;transition:border-color .15s,background .15s}
+  input::placeholder,textarea::placeholder{color:rgba(250,244,232,.62)}
+  input:focus,textarea:focus{outline:none;border-color:var(--orange);background:rgba(250,244,232,.14)}
+  textarea{min-height:170px;resize:vertical;line-height:1.6}
   .hp{position:absolute;left:-9999px}
-  form .btn-primary{justify-self:start;margin-top:.3rem}
-  .form-note{font-size:.85rem;color:rgba(250,244,232,.6)}
-  #form-success{display:none;padding:1.3rem 1.5rem;background:rgba(250,244,232,.1);border:1px solid rgba(241,176,106,.5);border-radius:10px;color:var(--paper)}
+  form .btn-primary{justify-self:start;margin-top:.4rem}
+  .form-note{font-size:.98rem;color:rgba(250,244,232,.78)}
+  #form-success{display:none;padding:1.5rem 1.6rem;font-size:1.08rem;background:rgba(250,244,232,.12);border:1px solid rgba(241,176,106,.6);border-radius:10px;color:var(--paper)}
   @media(max-width:780px){.contact-grid{grid-template-columns:1fr}}
 
   /* Footer */
   footer.site{background:var(--paper-2);border-top:1px solid var(--wine-20);padding:2.6rem 0}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;flex-wrap:wrap}
-  .foot-brand{font-family:var(--serif);color:var(--wine);font-size:1.05rem;font-weight:600}
-  .foot small{display:block;font-family:var(--sans);font-weight:400;font-size:.82rem;color:var(--wine-70)}
+  .foot-brand{font-family:var(--serif);color:var(--wine);font-size:1.15rem;font-weight:600}
+  .foot small{display:block;font-family:var(--sans);font-weight:400;font-size:.98rem;color:var(--wine-70)}
   .foot .crest{height:54px;width:auto;opacity:.9}
-  .foot-copy{font-size:.82rem;color:var(--wine-70)}
+  .foot-copy{font-size:.98rem;color:var(--wine-70)}
+
+  /* Mobiele fijnafstelling voor 65+: ruimere knoppen en regelafstand */
+  @media(max-width:680px){
+    body{line-height:1.8}
+    /* Alleen de knoppen in de inhoud volle breedte — niet die in de menubalk */
+    .hero-actions .btn,form .btn-primary,.mobile-menu .btn-primary{width:100%;min-height:60px;font-size:1.1rem}
+    .hero-actions{gap:.8rem}
+    blockquote{font-size:1.2rem}
+    .slide{flex:0 0 88%}
+  }
 </style>
 </head>
 <body>
@@ -244,7 +264,7 @@
       <p class="eyebrow" data-i18n="book.eyebrow">Het boek</p>
       <h2>De Verzwegen Koffer</h2>
       <p data-i18n="book.p1">Dit boek vertelt het inspirerende verhaal van twee jonge Haarlemmers die, onafhankelijk van elkaar, actief waren in het verzet tijdens de Tweede Wereldoorlog. Hun dagboeken en notities &mdash; jaren later ontdekt &mdash; onthullen hun moed, hoe ze elkaar na de oorlog vonden, en het leven dat ze samen opbouwden.</p>
-      <p data-i18n="book.p2">Een uniek stukje geschiedenis, opgetekend door wie het van het dichtstbij meemaakten.</p>
+      <p data-i18n="book.p2">Een uniek stukje geschiedenis, opgetekend door hen die het zelf hebben meegemaakt.</p>
       <div class="callout">
         <p data-i18n-html="book.callout"><strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is uitverkocht en wordt niet herdrukt. Het verhaal blijft wel beschikbaar: het boek is opgenomen in de collectie van de bibliotheek en te leen via uw eigen vestiging. <a class="lib-link" href="https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/" target="_blank" rel="noopener">Bekijk het boek op Bibliotheek.nl</a></p>
       </div>
@@ -271,8 +291,8 @@
   <div class="wrap">
     <p class="eyebrow" data-i18n="story.eyebrow">Het verhaal</p>
     <h2 data-i18n="story.title">Twee levens, twee dagboeken, één bevrijding</h2>
-    <p class="lede" data-i18n="story.lead">Netty Offers en Herman Mulder leren elkaar pas twee dagen na de bevrijding kennen — maar waren onafhankelijk van elkaar actief in het verzet.</p>
-    <p data-i18n="story.p1">Netty was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten; Herman sloot zich aan bij de Binnenlandse Strijdkrachten en diende als wapeninstructeur. Na de oorlog ontmoeten ze elkaar, worden verliefd en trouwen in 1948. Samen krijgen ze vier kinderen en bouwen ze twee succesvolle bedrijven op. Pas na hun overlijden komt de volle omvang van hun oorlogsjaren aan het licht.</p>
+    <p class="lede" data-i18n="story.lead">Netty Offers en Herman Mulder leerden elkaar pas twee dagen na de bevrijding kennen — maar waren, onafhankelijk van elkaar, allebei actief in het verzet.</p>
+    <p data-i18n="story.p1">Netty was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten; Herman sloot zich aan bij de Binnenlandse Strijdkrachten en diende als wapeninstructeur. Na de oorlog ontmoetten ze elkaar, werden verliefd en trouwden in 1948. Samen kregen ze vier kinderen en bouwden ze twee succesvolle bedrijven op. Pas na hun overlijden kwam de volle omvang van hun oorlogsjaren aan het licht.</p>
   </div>
 </section>
 
@@ -283,15 +303,15 @@
       <img src="netty.jpg" alt="Antoinette (Netty) Offers" loading="lazy" />
       <p class="role" data-i18n="netty.role">Koerierster · V.K.B.S.</p>
       <h3 data-i18n="netty.name">Antoinette &lsquo;Netty&rsquo; Offers</h3>
-      <p data-i18n="netty.p1">Zeventien jaar jong bij het uitbreken van de oorlog, werkt Netty als lokettiste op station Haarlem. Ze neemt deel aan de Spoorwegstaking van september 1944 en sluit zich daarna aan bij het Vrouwelijk Korps Binnenlandse Strijdkrachten als koerierster. Dankzij haar NS-documenten kan ze vrij reizen, ondanks de bezetter.</p>
-      <p data-i18n="netty.p2">Vanaf mei 1941 houdt ze vijf dagboeken bij &mdash; achthonderd pagina&rsquo;s vol verhalen, krantenknipsels en verzetsnieuws.</p>
+      <p data-i18n="netty.p1">Netty was zeventien toen de oorlog uitbrak en werkte als lokettiste op station Haarlem. Ze nam deel aan de Spoorwegstaking van september 1944 en sloot zich daarna aan bij het Vrouwelijk Korps Binnenlandse Strijdkrachten als koerierster. Dankzij haar NS-documenten kon ze vrij reizen, ondanks de bezetter.</p>
+      <p data-i18n="netty.p2">Vanaf mei 1941 hield ze vijf dagboeken bij &mdash; achthonderd pagina&rsquo;s vol verhalen, krantenknipsels en verzetsnieuws.</p>
     </article>
     <article class="person">
       <img src="herman.jpg" alt="Herman Mulder" loading="lazy" />
       <p class="role" data-i18n="herman.role">Wapeninstructeur · B.S.</p>
       <h3 data-i18n="herman.name">Herman Mulder</h3>
-      <p data-i18n="herman.p1">Herman werkt in de oorlogsjaren bij verschillende juweliers en horlogezaken, maar keert in 1943 terug naar Haarlem en sluit zich aan bij een ordedienst (O.D.), later onderdeel van de Binnenlandse Strijdkrachten. Als wapeninstructeur houdt hij stenguns, pistolen en handgranaten onder zijn bed verborgen.</p>
-      <p data-i18n="herman.p2">In 1945 houdt hij een agenda bij met beknopte notities die vaak naadloos aansluiten op Netty&rsquo;s dagboeken &mdash; samen beschrijven ze de hongerwinter van 1944&ndash;1945.</p>
+      <p data-i18n="herman.p1">Herman werkte in de oorlogsjaren bij verschillende juweliers en horlogezaken, maar keerde in 1943 terug naar Haarlem en sloot zich aan bij een ordedienst (O.D.), later onderdeel van de Binnenlandse Strijdkrachten. Als wapeninstructeur hield hij stenguns, pistolen en handgranaten onder zijn bed verborgen.</p>
+      <p data-i18n="herman.p2">In 1945 hield hij een agenda bij met beknopte notities die vaak naadloos aansluiten op Netty&rsquo;s dagboeken &mdash; samen beschrijven ze de hongerwinter van 1944&ndash;1945.</p>
     </article>
   </div>
 </section>
@@ -327,7 +347,7 @@
     <div>
       <p class="eyebrow" data-i18n="koffer.eyebrow">De koffer</p>
       <h2 data-i18n="koffer.title">Een koffertje vol verzwegen geschiedenis</h2>
-      <p data-i18n="koffer.p1">Na het overlijden van Netty en Herman ontdekken hun kinderen een koffertje vol dagboeken, agenda&rsquo;s, krantenknipsels en verzetsmemorabilia &mdash; een unieke kijk op hun leven tijdens de oorlog.</p>
+      <p data-i18n="koffer.p1">Na het overlijden van Netty en Herman ontdekten hun kinderen een koffertje vol dagboeken, agenda&rsquo;s, krantenknipsels en verzetsmemorabilia &mdash; een unieke kijk op hun leven tijdens de oorlog.</p>
       <p data-i18n="koffer.p2">Hun oudste dochter, Mirjam Vrees-Mulder, gebruikte het gevonden materiaal om het verhaal van haar ouders zorgvuldig te reconstrueren. Het resultaat verscheen in juni 2025, precies tachtig jaar na de bevrijding.</p>
       <blockquote data-i18n="koffer.quote">&ldquo;Wat zij verzwegen, bewaarden ze. Wat ze bewaarden, vertelt nu hun verhaal.&rdquo;</blockquote>
     </div>
@@ -413,18 +433,18 @@
       "hero.cta1":"Lees het verhaal","hero.cta2":"Neem contact op",
       "book.eyebrow":"Het boek",
       "book.p1":"Dit boek vertelt het inspirerende verhaal van twee jonge Haarlemmers die, onafhankelijk van elkaar, actief waren in het verzet tijdens de Tweede Wereldoorlog. Hun dagboeken en notities — jaren later ontdekt — onthullen hun moed, hoe ze elkaar na de oorlog vonden, en het leven dat ze samen opbouwden.",
-      "book.p2":"Een uniek stukje geschiedenis, opgetekend door wie het van het dichtstbij meemaakten.",
+      "book.p2":"Een uniek stukje geschiedenis, opgetekend door hen die het zelf hebben meegemaakt.",
       "book.callout":"<strong>Het boek verscheen in juni 2025, precies tachtig jaar na de bevrijding.</strong> De gedrukte oplage is uitverkocht en wordt niet herdrukt. Het verhaal blijft wel beschikbaar: het boek is opgenomen in de collectie van de bibliotheek en te leen via uw eigen vestiging. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">Bekijk het boek op Bibliotheek.nl</a>",
       "video.eyebrow":"In beeld","video.title":"Het verhaal in beeld","video.text":"Een korte film over de koffer, de dagboeken en het verhaal van Netty en Herman.",
       "story.eyebrow":"Het verhaal","story.title":"Twee levens, twee dagboeken, één bevrijding",
-      "story.lead":"Netty Offers en Herman Mulder leren elkaar pas twee dagen na de bevrijding kennen — maar waren onafhankelijk van elkaar actief in het verzet.",
-      "story.p1":"Netty was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten; Herman sloot zich aan bij de Binnenlandse Strijdkrachten en diende als wapeninstructeur. Na de oorlog ontmoeten ze elkaar, worden verliefd en trouwen in 1948. Samen krijgen ze vier kinderen en bouwen ze twee succesvolle bedrijven op. Pas na hun overlijden komt de volle omvang van hun oorlogsjaren aan het licht.",
+      "story.lead":"Netty Offers en Herman Mulder leerden elkaar pas twee dagen na de bevrijding kennen — maar waren, onafhankelijk van elkaar, allebei actief in het verzet.",
+      "story.p1":"Netty was koerierster bij het Vrouwelijk Korps Binnenlandse Strijdkrachten; Herman sloot zich aan bij de Binnenlandse Strijdkrachten en diende als wapeninstructeur. Na de oorlog ontmoetten ze elkaar, werden verliefd en trouwden in 1948. Samen kregen ze vier kinderen en bouwden ze twee succesvolle bedrijven op. Pas na hun overlijden kwam de volle omvang van hun oorlogsjaren aan het licht.",
       "netty.role":"Koerierster · V.K.B.S.","netty.name":"Antoinette ‘Netty’ Offers",
-      "netty.p1":"Zeventien jaar jong bij het uitbreken van de oorlog, werkt Netty als lokettiste op station Haarlem. Ze neemt deel aan de Spoorwegstaking van september 1944 en sluit zich daarna aan bij het Vrouwelijk Korps Binnenlandse Strijdkrachten als koerierster. Dankzij haar NS-documenten kan ze vrij reizen, ondanks de bezetter.",
-      "netty.p2":"Vanaf mei 1941 houdt ze vijf dagboeken bij — achthonderd pagina’s vol verhalen, krantenknipsels en verzetsnieuws.",
+      "netty.p1":"Netty was zeventien toen de oorlog uitbrak en werkte als lokettiste op station Haarlem. Ze nam deel aan de Spoorwegstaking van september 1944 en sloot zich daarna aan bij het Vrouwelijk Korps Binnenlandse Strijdkrachten als koerierster. Dankzij haar NS-documenten kon ze vrij reizen, ondanks de bezetter.",
+      "netty.p2":"Vanaf mei 1941 hield ze vijf dagboeken bij — achthonderd pagina’s vol verhalen, krantenknipsels en verzetsnieuws.",
       "herman.role":"Wapeninstructeur · B.S.","herman.name":"Herman Mulder",
-      "herman.p1":"Herman werkt in de oorlogsjaren bij verschillende juweliers en horlogezaken, maar keert in 1943 terug naar Haarlem en sluit zich aan bij een ordedienst (O.D.), later onderdeel van de Binnenlandse Strijdkrachten. Als wapeninstructeur houdt hij stenguns, pistolen en handgranaten onder zijn bed verborgen.",
-      "herman.p2":"In 1945 houdt hij een agenda bij met beknopte notities die vaak naadloos aansluiten op Netty’s dagboeken — samen beschrijven ze de hongerwinter van 1944–1945.",
+      "herman.p1":"Herman werkte in de oorlogsjaren bij verschillende juweliers en horlogezaken, maar keerde in 1943 terug naar Haarlem en sloot zich aan bij een ordedienst (O.D.), later onderdeel van de Binnenlandse Strijdkrachten. Als wapeninstructeur hield hij stenguns, pistolen en handgranaten onder zijn bed verborgen.",
+      "herman.p2":"In 1945 hield hij een agenda bij met beknopte notities die vaak naadloos aansluiten op Netty’s dagboeken — samen beschrijven ze de hongerwinter van 1944–1945.",
       "slider.eyebrow":"Beelden","slider.title":"Beelden uit de koffer","slider.hint":"Veeg voor meer beelden ›",
       "cap1":"De koffer geopend: dagboeken, krantenknipsels en persoonlijke bezittingen.",
       "cap2":"Aantekeningen over de Spoorwegstaking van september 1944.",
@@ -435,7 +455,7 @@
       "cap7":"Een eerbetoon aan Herman Mulder van zijn compagnie der Binnenlandse Strijdkrachten, juli 1945.",
       "cap8":"Een pagina uit een oorlogsdagboek.",
       "koffer.eyebrow":"De koffer","koffer.title":"Een koffertje vol verzwegen geschiedenis",
-      "koffer.p1":"Na het overlijden van Netty en Herman ontdekken hun kinderen een koffertje vol dagboeken, agenda’s, krantenknipsels en verzetsmemorabilia — een unieke kijk op hun leven tijdens de oorlog.",
+      "koffer.p1":"Na het overlijden van Netty en Herman ontdekten hun kinderen een koffertje vol dagboeken, agenda’s, krantenknipsels en verzetsmemorabilia — een unieke kijk op hun leven tijdens de oorlog.",
       "koffer.p2":"Hun oudste dochter, Mirjam Vrees-Mulder, gebruikte het gevonden materiaal om het verhaal van haar ouders zorgvuldig te reconstrueren. Het resultaat verscheen in juni 2025, precies tachtig jaar na de bevrijding.",
       "koffer.quote":"“Wat zij verzwegen, bewaarden ze. Wat ze bewaarden, vertelt nu hun verhaal.”",
       "faq.eyebrow":"Vragen","faq.title":"Veelgestelde vragen",
@@ -462,7 +482,7 @@
       "hero.cta1":"Read the story","hero.cta2":"Get in touch",
       "book.eyebrow":"The book",
       "book.p1":"This book tells the inspiring story of two young people from Haarlem who, independently of one another, were active in the resistance during the Second World War. Their diaries and notes — discovered years later — reveal their courage, how they found each other after the war, and the life they built together.",
-      "book.p2":"A unique piece of history, recorded by those who witnessed it from the closest of distances.",
+      "book.p2":"A unique piece of history, recorded by those who lived through it themselves.",
       "book.callout":"<strong>The book was published in June 2025, exactly eighty years after the liberation.</strong> The print run has sold out and will not be reprinted. The story remains available, however: the book is held in the Dutch public library collection and can be borrowed from your local branch. <a class=\"lib-link\" href=\"https://www.bibliotheek.nl/catalogus/titel.456592164.html/de-verzwegen-koffer/\" target=\"_blank\" rel=\"noopener\">View the book on Bibliotheek.nl</a>",
       "video.eyebrow":"Watch","video.title":"The story in pictures","video.text":"A short film about the suitcase, the diaries and the story of Netty and Herman.",
       "story.eyebrow":"The story","story.title":"Two lives, two diaries, one liberation",
